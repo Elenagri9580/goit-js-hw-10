@@ -52,10 +52,8 @@ function start() {
     const restTime = userSelectedDate - currentTime;
     const time = convertMs(restTime);
     updateTimer(time);
-    if (restTime <= 0) {
-      clearInterval(intervalId);
-      const newTime = convertMs(0);
-      updateTimer(newTime);
+    if (restTime <= 1000) {
+      clearInterval(intervalId);      
     }
   }, 1000);
 
